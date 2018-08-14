@@ -62,6 +62,10 @@ t.n_setup(s) = s;
 t.mean_error(s) = {mean(errors, 2)};
 t.RMSE(s) = {sqrt(mean(errors.^2, 2))};
 t.elapsed_time(s) = stop_time(s);
+t.n_simulation(s) = n_simulation;
+t.n_countries(s) = n_countries;
+t.n_year(s) = n_year;
+t.true_parms(s) = b;
 
 end
 writetable(t, strcat(path, 'simulation-results.csv'))
