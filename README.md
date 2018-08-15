@@ -15,3 +15,9 @@ To note that, there is no constant term in this model. The exporter and importer
 - n_year: integer, the number of year.
 - b: an array of true parameters countained in square brackets and separated by commas. For example, [1, -1].
 - drop_importer_each_year: set to 1 to drop one importer fixed effect each year; set to 0 to drop only the first year importer fixed effect. For example, if the data include three countries and two years, there will be six (3 x 2 = 6) exporter dummies and four (3 x 2 - 2 = 4) importer dummies when drop_importer_each_year equals to 1.
+
+## The estimation program
+
+- main.m: use local machine.
+- par_main.m: use local machine and parallel computing method.
+- cloud_main.m: use Techila and Google Cloud computing method. For details in installing, please visit this [website](http://www.techilatechnologies.com/help/techila-distributed-computing-engine/google-cloud-launcher-techila-distributed-computing-engine.html); for details in implementing on Matlab, please visit this [website](http://www.techilatechnologies.com/help/techila-distributed-computing-engine/matlab-techila-distributed-computing-engine.html).
