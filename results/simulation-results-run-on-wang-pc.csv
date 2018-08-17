@@ -1,0 +1,8 @@
+n_setup,mean_error_1,mean_error_2,RMSE_1,RMSE_2,elapsed_time,n_simulation,n_countries,n_year,true_params_1,true_params_2,drop_importer_each_year,per-simulation-time
+1,-0.001562022,0.000745392,0.039643893,0.039716854,18781.03036,1000,50,10,1,-1,0,18.78103036
+2,-0.000569781,-2.59E-06,0.021577118,0.021505655,234146.1304,1000,100,10,1,-1,0,234.1461304
+,,,,,,,,,,,,
+machine spec,,,,,,,,,,,,
+i7-4770 3.40GHz,,,,,,,,,,,,
+16GB ram,,,,,,,,,,,,
+Windows 7,,,,,,,,,,,,
