@@ -51,9 +51,7 @@ end
 
 b1 = zeros(length(b) + size(mr_term, 2), n_simulation);
 
-progressbar(['Running simulation, setup ', num2str(s), '.'])
 for n_sim = 1:n_simulation
-    
     mr_term_coeff = randn(size(mr_term, 2), 1);
     e = randn(n_obs, 1);
     x = (rand(n_obs, length(b)) - 0.5) * 2;
@@ -63,13 +61,13 @@ for n_sim = 1:n_simulation
 
 % Run simulation
     b1(:, n_sim) = glmfit(X, y,'poisson', 'constant', 'off');
-    progressbar(n_sim/n_simulation)
+    disp(['Finished the ', num2str(n_sim), '/', num2str(n_simulation), ' task.'])
 end
 stop_time(s) = toc;
 
 % Producing Simulation Result
 disp('Mean error')
-errors = b1(1:length(b), :) - B(1:length(b));
+errors = b1(1:length(b), :) - b;
 disp(mean(errors, 2))
 disp('RMSE')
 disp(sqrt(mean(errors.^2, 2)))
@@ -89,5 +87,6 @@ t.n_year(s) = n_year;
 t.true_params(s) = {b};
 t.drop_importer_each_year(s) = drop_importer_each_year;
 
+clear mr_term x X y e
 end
 writetable(t, strcat(path, 'simulation-results.csv'))

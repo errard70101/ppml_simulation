@@ -1,3 +1,2 @@
 n_simulation,n_countries,n_year,b,drop_importer_each_year
-1000,50,10,"[1, -1]",1
-1000,100,10,"[1, -1]",1
+200,100,10,"[1, -1]",1
