@@ -6,8 +6,9 @@ disp('Loading result files...')
 
 tic
 result = csvread(strcat(path, result_file_name, num2str(1), '.csv'));
-for i = 2:5
-    result = [result, csvread(strcat(path, result_file_name, num2str(i), '.csv'))];
+result = zeros(size(result))
+for i = 1:5
+    result = csvread(strcat(path, result_file_name, num2str(i), '.csv'));
 end
 disp('Finish loading.')
 toc

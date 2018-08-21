@@ -1,14 +1,11 @@
 % Please modify the line below to set the correct path
 
 path = "/Users/errard/Dropbox/GitHub/ppml_simulation/results/";
-result_file_name = "sim-result-100-countries-10-years-drop-10-importer-";
+result_file_name = "sim-result-100-countries-10-years-drop-1-importer.csv";
 disp('Loading result files...')
 
 tic
-result = csvread(strcat(path, result_file_name, num2str(1), '.csv'));
-for i = 2:5
-    result = [result, csvread(strcat(path, result_file_name, num2str(i), '.csv'))];
-end
+result = csvread(strcat(path, result_file_name));
 disp('Finish loading.')
 toc
 
